@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box; 
+  /* Kaikki elementit sisältävät reunukset ja paddingin leveyslaskussa */
+  font-family: system-ui, sans-serif; 
+  /* Asetetaan perusfontti */
+}
+
+body {
+  background: #0f172a; 
+  /* Taustaväri tummansininen */
+  color: white; 
+  /* Tekstin väri valkoinen */
+  margin: 0; 
+  /* Poistetaan oletusmarginaalit */
+
+  display: flex; 
+  justify-content: center; 
+  /* Keskitetään vaakasuunnassa */
+  align-items: center; 
+  /* Keskitetään pystysuunnassa */
+  height: 80vh; 
+  /* Otetaan 80% näkymän korkeudesta */
+}
+
+.app {
+  max-width: 400px; 
+  /* Maksimileveys kortille */
+  text-align: center; 
+  /* Teksti keskelle */
+}
+
+.search-wrapper {
+  position: relative; 
+  /* Ehdotusten lista asetetaan suhteellisesti tämän divin sisälle */
+  display: flex; 
+  /* Input ja nappi vierekkäin */
+  gap: 8px; 
+  /* Väli inputin ja napin välillä */
+}
+
+input {
+  flex: 1; 
+  /* Vie kaiken jäljelle jäävän tilan */
+  padding: 10px; 
+  border-radius: 6px; 
+  border: none; 
+}
+
+button {
+  padding: 10px 14px; 
+  border-radius: 6px; 
+  border: none; 
+  background: #38bdf8; 
+  /* Sininen nappi */
+  cursor: pointer; 
+  /* Näyttää, että nappia voi klikata */
+}
+
+.suggestions {
+  position: absolute; 
+  /* Listan sijainti suhteessa wrapperiin */
+  top: 44px; 
+  /* Sijoitetaan inputin alapuolelle */
+  width: 100%; 
+  /* Listan leveys sama kuin inputin */
+  background: #1e293b; 
+  border-radius: 6px; 
+  padding: 0; 
+  margin: 0; 
+  list-style: none; 
+  /* Poistetaan bulletit */
+}
+
+.suggestions li {
+  padding: 8px; 
+  cursor: pointer; 
+  /* Klikattava lista */
+}
+
+.suggestions li:hover {
+  background: #334155; 
+  /* Hover-efekti */
+}
+
+.card {
+  background: #020617; 
+  /* Kortin tumma tausta */
+  padding: 20px; 
+  border-radius: 12px; 
+  margin-top: 20px; 
+  /* Etäisyys yläpuolella olevasta elementistä */
+}
+
+.error {
+  color: #f87171; 
+  /* Punainen virheteksti */
+}
+
+.info {
+  color: #38bdf8; 
+  /* Sininen infoteksti */
+}
